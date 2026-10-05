@@ -29,7 +29,7 @@
         "all-outputs": false,
         "move-to-monitor": false,
         "show-special": false,
-        "sort-by": "number",
+        "sort-by": "id",
         "tooltip": false,
         "format": "{name}"
     },
