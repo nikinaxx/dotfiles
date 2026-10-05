@@ -1,0 +1,55 @@
+[
+{
+    "output": "Dell Inc. DELL S2722DC 6NSGHD3",
+    // General Settings
+    "position": "bottom",
+    "layer": "top",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    // Load Modules
+    "include": [
+        "~/.config/waybar/themes/nik/modules.json"
+    ],
+    // Modules Left
+    "modules-left": [
+        "custom/exit",
+        "custom/settings",
+        "custom/ml4w-welcome",
+        "custom/updates"
+    ],
+    // Modules Center
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    // Modules Right    
+    "modules-right": [
+        "group/hardware",
+        "pulseaudio",
+        "bluetooth",
+	"network",
+        "battery",
+        "clock"
+    ]
+},
+{
+    "output": "!Dell Inc. DELL S2722DC 6NSGHD3",
+    "position": "bottom",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+
+    "include": [
+        "/home/nik/.config/waybar/themes/nik/modules.json",
+        "/home/nik/.config/waybar/modules.json"
+    ],
+
+    "modules-left": [],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": []
+}
+]
