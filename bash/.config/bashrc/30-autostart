@@ -45,3 +45,7 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+# Navigation
+eval "$(zoxide init bash)"
+eval "$(fzf --bash)"
