@@ -14,6 +14,3 @@ if settings then
     end
     settings:close()
 end
-
-local name = "default.lua"
-load_variant(name,"environments")

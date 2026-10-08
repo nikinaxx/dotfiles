@@ -1,2 +1,4 @@
-local name = "default.lua"
-load_variant(name,"windowrules")
+-- -----------------------------------------------------
+-- Window rules
+-- Add hl.window_rule({ ... }) entries here.
+-- -----------------------------------------------------

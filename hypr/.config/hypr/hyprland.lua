@@ -6,17 +6,17 @@
 -- Advanced configuration for Hyprland
 
 -- FUNCTIONS
-require("functions")
+require("conf.functions")
 
 -- MONITORS
 require("monitors")
 require("conf.monitor")
 
 -- INPUT
-require("input")
+require("conf.input")
 
 -- GESTURE
-require("gestures")
+require("conf.gestures")
 
 -- AUTOSTART
 require("conf.autostart")
@@ -25,15 +25,16 @@ require("conf.autostart")
 require("colors")
 
 -- CONFIGURATION
+-- Look variants are picked in conf/variants.lua
+local variant = require("conf.variants")
 require("conf.environment")
-require("conf.window")
-require("conf.decoration")
+require("conf.windows." .. variant.windows)
+require("conf.decorations." .. variant.decorations)
 require("conf.layout")
-require("conf.workspace")
 require("conf.misc")
 require("conf.keybinding")
 require("conf.windowrule")
-require("conf.animation")
+require("conf.animations." .. variant.animations)
 require("conf.ml4w")
 
 -- PLUGINS

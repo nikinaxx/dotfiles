@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cache_file="$HOME/.cache/toggle_animation"
-if [[ $(cat $HOME/.config/hypr/conf/animation.conf) == *"disabled"* ]]; then
-    echo ":: Toggle blocked by disabled.conf variation."
+if grep -q 'animations *= *"disabled"' "$HOME/.config/hypr/conf/variants.lua"; then
+    echo ":: Toggle blocked by the disabled animations variant."
 else
     if [ -f $cache_file ]; then
         hyprctl keyword animations:enabled true
