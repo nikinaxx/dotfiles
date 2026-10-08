@@ -9,6 +9,5 @@ hl.config({
         },
         resize_on_border = true,
         allow_tearing = false,
-        layout = "dwindle",
     }
 })

@@ -4,11 +4,10 @@ hl.config({
         gaps_out = 16,
         border_size = 1,
         col = {
-            active_border = on_primary,
-            inactive_border = primary,
+            active_border = primary,
+            inactive_border = on_primary,
         },
         resize_on_border = true,
         allow_tearing = false,
-        layout = "dwindle",
     }
 })

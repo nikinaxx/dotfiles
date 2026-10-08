@@ -4,7 +4,7 @@
 -- -----------------------------------------------------
 
 return {
-    windows     = "gamemode",
+    windows     = "border-reverse",
     decorations = "rounding",
     animations  = "default",
 }

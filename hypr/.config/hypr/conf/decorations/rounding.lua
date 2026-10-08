@@ -4,13 +4,8 @@
 -- -----------------------------------------------------
 
 hl.config({
-    general = {
-        border_size = 1,
-        gaps_in = 0,
-        gaps_out = 0,
-    },
     decoration = {
-        rounding = 4,
+        rounding = 8,
         active_opacity = 1.0,
         inactive_opacity = 1.0,
         fullscreen_opacity = 1.0,

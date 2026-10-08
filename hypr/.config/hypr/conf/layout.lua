@@ -8,16 +8,11 @@ hl.config({
     },
 
     dwindle = {
-	-- split right side only
-	force_split = 2,
-	-- dont change splits on resize
-        preserve_split = true,
-	-- split based on cursor position
-	smart_split = false,
-	-- default split ratio
-	default_split_ratio = 1.0,
-	-- determinescale for windows in special workspaces
-	special_scale_factor = 0.9,
+        force_split = 2, -- split right side only
+        preserve_split = true, -- dont change splits on resize
+        smart_split = false, -- split based on cursor position
+        default_split_ratio = 1.0, -- default split ratio
+        special_scale_factor = 0.9, -- determinescale for windows in special workspaces
     },
 
     scrolling = {
@@ -27,7 +22,6 @@ hl.config({
         fullscreen_on_one_column = true,
     },
     
-    -- Master layout is handled here if needed
     master = {
         -- new_status = "master" -- Commented out due to compatibility reasons
     },
