@@ -1,0 +1,9 @@
+[open]
+prepend_rules = [
+    { mime = "application/pdf", use = "brave" },
+]
+
+[opener]
+brave = [
+    { run = 'brave-browser --new-window "$@"', orphan = true, desc = "Brave" },
+]

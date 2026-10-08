@@ -2,9 +2,9 @@
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Applications
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("~/.config/ml4w/settings/terminal.sh"), { description = "Open the terminal" })
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("~/.config/ml4w/settings/browser.sh"), { description = "Open the browser" })
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("~/.config/ml4w/settings/filemanager"), { description = "Open the filemanager" })
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("kitty"), { description = "Open the terminal" })
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("brave-browser --new-window"), { description = "Open the browser" })
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("kitty bash -l -i -c 'y; exec bash -l'"), { description = "Open the filemanager" })
 hl.bind(mainMod .. " + CTRL + E", hl.dsp.exec_cmd("~/.config/ml4w/settings/emojipicker.sh"), { description = "Open the emoji picker" })
 -- hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("~/.config/ml4w/settings/calculator.sh"), { description = "Open the calculator" })
 
