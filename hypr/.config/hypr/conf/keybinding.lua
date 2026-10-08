@@ -24,14 +24,15 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }), { description = "Move window to workspace " .. i })
 end
 
-hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }), { description = "Move focus left" })
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }), { description = "Move focus left" })
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }), { description = "Move focus right" })
-hl.bind(mainMod .. " + K",    hl.dsp.focus({ direction = "up" }), { description = "Move focus up" })
-hl.bind(mainMod .. " + J",  hl.dsp.focus({ direction = "down" }), { description = "Move focus down" })
+hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }), { description = "Move focus up" })
+hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }), { description = "Move focus down" })
 hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "l" }), { description = "Move tiled window left" })
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "r" }), { description = "Move tiled window right" })
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "u" }), { description = "Move tiled window up" })
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "d" }), { description = "Move tiled window down" })
+hl.bind(mainMod .. " + P", hl.dsp.layout("promote"), { description = "Promote window to full column" })
 
 hl.bind(mainMod .. " + CTRL + SHIFT + H", hl.dsp.workspace.move({ monitor = "l" }))
 hl.bind(mainMod .. " + CTRL + SHIFT + L", hl.dsp.workspace.move({ monitor = "r" }))
@@ -45,10 +46,10 @@ hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({ x = -100, y = 0, re
 hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({ x = 0, y = -100, relative = true }), { repeating = true }, { description = "Reduce window height with keyboard" })
 hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({ x = 0, y = 100, relative = true }), { repeating = true }, { description = "Increase window height with keyboard" })
 
-hl.bind(mainMod .. " + equal", hl.dsp.layout("colresize +0.1"), { description = "Grow current column" })
-hl.bind(mainMod .. " + minus", hl.dsp.layout("colresize -0.1"), { description = "Shrink current column" })
-hl.bind(mainMod .. " + C", hl.dsp.layout("colresize +conf"), { description = "Cycle to next preset column width" })
-hl.bind(mainMod .. " + X", hl.dsp.layout("colresize -conf"), { description = "Cycle to previous preset column width" })
+-- hl.bind(mainMod .. " + equal", hl.dsp.layout("colresize +0.1"), { description = "Grow current column" })
+-- hl.bind(mainMod .. " + minus", hl.dsp.layout("colresize -0.1"), { description = "Shrink current column" })
+hl.bind(mainMod .. " + EQUAL", hl.dsp.layout("colresize +conf"), { description = "Cycle to next preset column width" })
+hl.bind(mainMod .. " + MINUS", hl.dsp.layout("colresize -conf"), { description = "Cycle to previous preset column width" })
 
 hl.bind(mainMod .. " + G", hl.dsp.group.toggle(), { description = "Toggle window group" })
 
@@ -63,7 +64,7 @@ hl.bind(mainMod .. " + CTRL + P", hl.dsp.exec_cmd("qs ipc call power toggle"), {
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("~/.config/ml4w/scripts/ml4w-wallpaper-app --random"), { description = "Change the wallpaper" })
 hl.bind(mainMod .. " + CTRL + W", hl.dsp.exec_cmd("~/.config/ml4w/scripts/ml4w-wallpaper-app"), { description = "Open wallpaper selector" })
 hl.bind(mainMod .. " + ALT + W", hl.dsp.exec_cmd("~/.config/ml4w/scripts/ml4w-wallpaper-automation"), { description = "Start random wallpaper script" })
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.config/hypr/scripts/launcher.sh"), { description = "Open application launcher" })
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("~/.config/hypr/scripts/launcher.sh"), { description = "Open application launcher" })
 hl.bind(mainMod .. " + CTRL + K", hl.dsp.exec_cmd("~/.config/hypr/scripts/keybindings.sh"), { description = "Show keybindings" })
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("~/.config/ml4w/scripts/ml4w-reload-statusbar"), { description = "Reload Status Bar" })
 hl.bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("~/.config/ml4w/scripts/ml4w-toggle-statusbar"), { description = "Toggle Status Bar" })
