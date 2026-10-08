@@ -4,7 +4,7 @@
 
 hl.config({
     general = {
-        layout = "dwindle",
+        layout = "scrolling",
     },
 
     dwindle = {
@@ -21,8 +21,8 @@ hl.config({
     },
 
     scrolling = {
-        direction = "left",
-        column_width = 1.0,
+        direction = "right",
+        column_width = 0.7,
         follow_focus = true,
         fullscreen_on_one_column = true,
     },
@@ -36,5 +36,6 @@ hl.config({
         workspace_back_and_forth = false,
         allow_workspace_cycles = true,
         pass_mouse_when_bound = false,
+        window_direction_monitor_fallback = false,
     },
 })
