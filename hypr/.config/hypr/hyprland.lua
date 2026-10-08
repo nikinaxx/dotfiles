@@ -36,6 +36,9 @@ require("conf.windowrule")
 require("conf.animation")
 require("conf.ml4w")
 
+-- PLUGINS
+require("conf.plugins.scrolloverview")
+
 -- CUSTOM
 local f = io.open(os.getenv("HOME") .. "/.config/hypr/custom.lua", "r")
 if f then

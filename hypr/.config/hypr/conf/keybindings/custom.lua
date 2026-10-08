@@ -6,7 +6,7 @@ hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("~/.config/ml4w/settings/termina
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("~/.config/ml4w/settings/browser.sh"), { description = "Open the browser" })
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("~/.config/ml4w/settings/filemanager"), { description = "Open the filemanager" })
 hl.bind(mainMod .. " + CTRL + E", hl.dsp.exec_cmd("~/.config/ml4w/settings/emojipicker.sh"), { description = "Open the emoji picker" })
-hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("~/.config/ml4w/settings/calculator.sh"), { description = "Open the calculator" })
+-- hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("~/.config/ml4w/settings/calculator.sh"), { description = "Open the calculator" })
 
 -- Windows
 -- hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { description = "Kill active window" })
@@ -36,7 +36,7 @@ hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "d" }), { de
 hl.bind(mainMod .. " + CTRL + SHIFT + H", hl.dsp.workspace.move({ monitor = "l" }))
 hl.bind(mainMod .. " + CTRL + SHIFT + L", hl.dsp.workspace.move({ monitor = "r" }))
 
--- Move/resize windows with mainMod + LMB/RMB and dragging
+-- Move/resize windows
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true, description = "Move window with the mouse" })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true, description = "Resize window with the mouse" })
 
@@ -44,6 +44,12 @@ hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = 100, y = 0, re
 hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.resize({ x = -100, y = 0, relative = true }), { repeating = true }, { description = "Reduce window width with keyboard" })
 hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.resize({ x = 0, y = -100, relative = true }), { repeating = true }, { description = "Reduce window height with keyboard" })
 hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.resize({ x = 0, y = 100, relative = true }), { repeating = true }, { description = "Increase window height with keyboard" })
+
+hl.bind(mainMod .. " + equal", hl.dsp.layout("colresize +0.1"), { description = "Grow current column" })
+hl.bind(mainMod .. " + minus", hl.dsp.layout("colresize -0.1"), { description = "Shrink current column" })
+hl.bind(mainMod .. " + C", hl.dsp.layout("colresize +conf"), { description = "Cycle to next preset column width" })
+hl.bind(mainMod .. " + X", hl.dsp.layout("colresize -conf"), { description = "Cycle to previous preset column width" })
+
 hl.bind(mainMod .. " + G", hl.dsp.group.toggle(), { description = "Toggle window group" })
 
 -- Actions
@@ -77,6 +83,7 @@ hl.bind(mainMod .. " + CTRL + L", hl.dsp.exec_cmd("~/.config/ml4w/scripts/ml4w-p
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("qs -p ~/.local/share/quickshell-overview ipc call overview toggle"), { description = "Open Select Window Menu" })
 hl.bind(mainMod .. " + N", hl.dsp.focus({ workspace = "emptynm" }), { description = "Open next unused workspace" })
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.window.move({ workspace = "emptynm" }), { description = "Move current window to the next empty workspace" })
+hl.bind(mainMod .. " + O",  hl.plugin.scrolloverview.overview("toggle all"))
 hl.bind("CTRL + ALT + T", hl.dsp.exec_cmd("~/.config/ml4w/themes/themes.sh"), { description = "Open Select Window Menu" })
 hl.bind("ALT + Tab", hl.dsp.window.cycle_next({ tiled = true }))
 hl.bind("ALT + SHIFT + Tab", hl.dsp.window.cycle_next({ tiled = true, next = false }))

@@ -16,6 +16,9 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("systemctl --user stop xdg-desktop-portal xdg-desktop-portal-hyprland")
     hl.exec_cmd("systemctl --user start xdg-desktop-portal-hyprland xdg-desktop-portal")
 
+    -- Load hyprpm plugins (see conf/plugins/)
+    hl.exec_cmd("hyprpm reload -n")
+
     -- awww daemon
     hl.exec_cmd("awww-daemon")
 
