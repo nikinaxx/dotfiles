@@ -1,0 +1,19 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "6229767"
+hash = "187cc58ba7ac3befd49c342129e6f1b6"
+
+[[flavor.deps]]
+use = "bennyyip/gruvbox-dark"
+rev = "619fdc5"
+hash = "4ce83c1c8be0616a1c7dc22c04b1380f"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "1183892"
+hash = "63c0a7b2564356db1b574033003a3419"
+
+[[flavor.deps]]
+use = "kshawkat/aurora-storm"
+rev = "c28b9da"
+hash = "f9cd1ea338e6ebba3b7c7f7e08df9237"
