@@ -1,9 +1,17 @@
-[open]
-prepend_rules = [
-    { mime = "application/pdf", use = "brave" },
-]
-
 [opener]
 brave = [
     { run = 'brave-browser --new-window "$@"', orphan = true, desc = "Brave" },
+]
+
+extract = [
+	{ run = "ya pub extract --list %s", desc = "Extract here" },
+]
+extract2 = [
+    { run = 'for f in "$@"; do 7z x -y -bd -o"${f%.*}" "$f" < /dev/null; done', desc = "Extract to folder", for = "unix" },
+]
+
+[open]
+prepend_rules = [
+    { name = "*.zip", use = "extract2" },
+    { mime = "application/pdf", use = "brave" },
 ]
