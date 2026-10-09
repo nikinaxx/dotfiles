@@ -6,10 +6,11 @@
 hl.config({
     decoration = {
         rounding = 8,
+        rounding_power = 2,
+
         active_opacity = 1.0,
         inactive_opacity = 1.0,
         fullscreen_opacity = 1.0,
-        rounding_power = 2,
 
         shadow = {
             enabled = true,
@@ -20,12 +21,16 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 3,
-            passes    = 4,
-            new_optimizations = on,
+            size      = 7,
+            passes    = 3,
             ignore_opacity = true,
-            xray = true,
+
+            noise = 0.08,
+            contrast = 1.5,
             vibrancy  = 0.1696,
+
+            xray = false,
+            new_optimizations = true,
         },
     },
 })

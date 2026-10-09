@@ -32,6 +32,7 @@ hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.swap({ direction = "l" }), { de
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.swap({ direction = "r" }), { description = "Move tiled window right" })
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.swap({ direction = "u" }), { description = "Move tiled window up" })
 hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.swap({ direction = "d" }), { description = "Move tiled window down" })
+
 hl.bind(mainMod .. " + SEMICOLON", hl.dsp.layout("consume_or_expel next"), { description = "Swapsplit" })
 hl.bind(mainMod .. " + SHIFT + SEMICOLON", hl.dsp.layout("consume_or_expel prev"), { description = "Swapsplit" })
 
