@@ -1,17 +1,20 @@
 # -----------------------------------------------------
-# INIT
+# AUTOSTART
 # -----------------------------------------------------
 
 # -----------------------------------------------------
-# Path
+# Fastfetch
 # -----------------------------------------------------
-# Keep entries unique, so nested shells don't keep appending
-typeset -U path PATH
-path=(/usr/lib/ccache/bin ${path%/} ~/.cargo/bin ~/.local/bin)
+if [[ $TTY == /dev/pts/* && ! -f ~/.config/ml4w/settings/hide-fastfetch ]]; then
+    fastfetch
+fi
 
 # -----------------------------------------------------
-# Exports
+# Direnv
 # -----------------------------------------------------
-export EDITOR=nvim
-export STM32_PRG_PATH=/home/nik/.local/opt/STM32CubeProgrammer/bin
-export STM32CubeMX_PATH=/home/nik/.local/opt/STM32CubeMX
+eval "$(direnv hook zsh)"
+
+# -----------------------------------------------------
+# Zoxide
+# -----------------------------------------------------
+eval "$(zoxide init zsh --cmd cd)"
