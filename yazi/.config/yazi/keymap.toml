@@ -7,3 +7,13 @@ desc = "Open current folder in VS Code"
 on   = "<Enter>"
 run  = "plugin smart-enter"
 desc = "Enter folder or open file"
+
+[[mgr.prepend_keymap]]
+on   = "<C-e>"
+run  = "seek 5"
+desc = "Scroll preview down"
+
+[[mgr.prepend_keymap]]
+on   = "<C-y>"
+run  = "seek -5"
+desc = "Scroll preview up"
