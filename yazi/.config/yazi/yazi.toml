@@ -3,6 +3,11 @@ brave = [
     { run = 'brave-browser --new-window "$@"', orphan = true, desc = "Brave" },
 ]
 
+# -r reuses the last focused VS Code window instead of opening a new one
+vscode = [
+    { run = 'code -r "$@"', orphan = true, desc = "VS Code" },
+]
+
 extract = [
 	{ run = "ya pub extract --list %s", desc = "Extract here" },
 ]
@@ -14,4 +19,8 @@ extract2 = [
 prepend_rules = [
     { name = "*.zip", use = "extract2" },
     { mime = "application/pdf", use = "brave" },
+    { mime = "text/*", use = [ "vscode", "edit", "reveal" ] },
+    { mime = "application/{json,ndjson}", use = [ "vscode", "edit", "reveal" ] },
+    { mime = "*/javascript", use = [ "vscode", "edit", "reveal" ] },
+    { mime = "inode/empty", use = [ "vscode", "edit", "reveal" ] },
 ]
