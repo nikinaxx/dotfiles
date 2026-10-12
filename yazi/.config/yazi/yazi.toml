@@ -1,3 +1,6 @@
+[mgr]
+show_hidden = true
+
 [opener]
 brave = [
     { run = 'brave-browser --new-window "$@"', orphan = true, desc = "Brave" },
