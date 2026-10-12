@@ -1,0 +1,10 @@
+# -----------------------------------------------------
+# PLUGINS (sudo dnf install zsh-autosuggestions zsh-syntax-highlighting)
+# -----------------------------------------------------
+_p=/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -r $_p ]] && source $_p
+
+# Must be sourced last
+_p=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -r $_p ]] && source $_p
+unset _p

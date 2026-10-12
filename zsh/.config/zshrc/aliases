@@ -1,0 +1,37 @@
+# -----------------------------------------------------
+# ALIASES
+# -----------------------------------------------------
+
+# -----------------------------------------------------
+# General
+# -----------------------------------------------------
+alias ..='cd ..'
+alias c='clear'
+alias ff='fastfetch'
+alias ls='eza -a --icons=always'
+alias ll='eza -al --icons=always'
+alias lt='eza -a --tree --level=1 --icons=always'
+alias shutdown='~/.config/ml4w/scripts/ml4w-power -p'
+alias v='$EDITOR'
+alias vim='$EDITOR'
+alias wifi='nmtui'
+alias apps='~/.config/ml4w/bin/ml4w-apps'
+alias screenshot='~/.config/ml4w/bin/ml4w-screenshot'
+alias updates='~/.config/ml4w/scripts/ml4w-install-system-updates'
+alias lock='hyprlock'
+alias clock='tty-clock'
+alias system='~/.config/ml4w/settings/systemmonitor'
+alias quick='~/.config/ml4w/bin/ml4w-quicklinks'
+alias wallpaper='~/.config/ml4w/bin/ml4w-wallpaper'
+alias settings='ml4w-dotfiles-settings com.ml4w.dotfiles'
+
+# -----------------------------------------------------
+# Scripts
+# -----------------------------------------------------
+alias ascii='~/.config/ml4w/scripts/ml4w-ascii-header'
+
+# -----------------------------------------------------
+# System
+# -----------------------------------------------------
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
