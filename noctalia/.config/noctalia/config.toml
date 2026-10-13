@@ -1,0 +1,291 @@
+config_version = 14
+
+[bar]
+order = [ "primary" ]
+
+    [bar.primary]
+    background_opacity = 0.65999998524785042
+    border_width = 1.0
+    center = [ "workspaces" ]
+    concave_edge_corners = false
+    end = [ "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "clock" ]
+    margin_edge = 3
+    margin_ends = 16
+    position = "bottom"
+    radius = 8
+    start = [ "session", "control-center", "launcher", "wallhaven" ]
+    thickness = 27
+
+        [bar.primary.monitor."Dell Inc. DELL S2721DS 5LWPQ43"]
+
+        [bar.primary.monitor."Dell Inc. DELL S2722DC 6NSGHD3"]
+        end = []
+        start = []
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[dock]
+active_monitor_only = true
+
+[lockscreen]
+transition = [ "fade" ]
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@DP-9",
+    "lockscreen-login-box@DP-2",
+    "lockscreen-login-box@DP-8",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-login-box@FALLBACK",
+    "lockscreen-login-box@DP-7",
+    "lockscreen-login-box@DP-1"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 70.0
+    box_width = 240.0
+    cx = 1024.0
+    cy = 576.0
+    enabled = false
+    output = "DP-1"
+    placement_height = 1152.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.70999999999999996
+        background_radius = 32.0
+        center_password_text = true
+        input_opacity = 0.5
+        input_radius = 32.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = false
+        show_session_buttons = false
+        show_unlock_hint = false
+        show_weather = false
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-2"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1024.0
+    cy = 860.79998779296875
+    output = "DP-2"
+    placement_height = 1152.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-2".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-7"]
+    box_height = 70.0
+    box_width = 240.0
+    cx = 1024.0
+    cy = 576.0
+    output = "DP-7"
+    placement_height = 1152.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-7".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.79000000000000004
+        background_radius = 32.0
+        center_password_text = true
+        input_opacity = 0.5
+        input_radius = 32.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = false
+        show_media = false
+        show_session_buttons = false
+        show_unlock_hint = false
+        show_weather = false
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-8"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1024.0
+    cy = 860.79998779296875
+    output = "DP-8"
+    placement_height = 1152.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-8".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-9"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 1024.0
+    cy = 860.79998779296875
+    output = "DP-9"
+    placement_height = 1152.0
+    placement_width = 2048.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-9".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "FALLBACK"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@FALLBACK".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 640.0
+    cy = 557.3333740234375
+    output = "eDP-1"
+    placement_height = 800.0
+    placement_width = 1280.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[plugins]
+enabled = [ "noctalia/wallhaven" ]
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Catppuccin Macchiato Blue"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "m3-content"
+
+[wallpaper.default]
+path = "/home/nik/Pictures/wallhaven-og33x9.jpg"
+
+[wallpaper.last]
+path = "/home/nik/Pictures/wallhaven-og33x9.jpg"
+
+[wallpaper.monitors.DP-1]
+path = "/home/nik/Pictures/wallhaven-4dpyeo.jpg"
+
+[wallpaper.monitors.DP-2]
+path = "/home/nik/Pictures/wallhaven-og33x9.jpg"
+
+[wallpaper.monitors.DP-7]
+path = "/home/nik/Pictures/wallhaven-4dpyeo.jpg"
+
+[wallpaper.monitors.DP-8]
+path = "/home/nik/Pictures/wallhaven-og33x9.jpg"
+
+[widget.battery]
+show_label = false
+
+[widget.clock]
+format = "{:%a %d.%m. %H:%M}"
+
+[widget.network]
+show_label = false
+
+[widget.volume]
+show_label = false
+
+[widget.wallhaven]
+type = "noctalia/wallhaven:wallhaven"

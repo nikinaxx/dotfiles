@@ -19,8 +19,8 @@ hl.on("hyprland.start", function ()
     -- Load hyprpm plugins (see conf/plugins/)
     hl.exec_cmd("hyprpm reload -n")
 
-    -- awww daemon
-    hl.exec_cmd("awww-daemon")
+    -- awww daemon (replaced by noctalia wallpaper)
+    -- hl.exec_cmd("awww-daemon")
 
     -- Load cursor
     hl.exec_cmd("hyprctl setcursor Bibata-Modern-Ice 24")
@@ -29,30 +29,32 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("~/.config/ml4w/listeners.sh --startall")
 
     -- Start waybar
-    hl.exec_cmd(HOME .. "/.config/waybar/launch.sh")
+    -- hl.exec_cmd(HOME .. "/.config/waybar/launch.sh")
+    -- Start noctalia
+    hl.exec_cmd("noctalia")
 
-    -- Start polkit daemon
-    hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+    -- Start polkit daemon (path doesn't exist on Fedora; use noctalia's polkit_agent instead)
+    -- hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 
     -- Restore wallpaper (skip for quickshell — handled inside ml4w-autostart)
-    if wallpaper_app ~= "quickshell" then
-        hl.exec_cmd("~/.config/ml4w/scripts/ml4w-wallpaper-app --restore")
-    end
+    -- if wallpaper_app ~= "quickshell" then
+    --     hl.exec_cmd("~/.config/ml4w/scripts/ml4w-wallpaper-app --restore")
+    -- end
 
-    -- Autostart scripts
-    hl.exec_cmd("~/.config/ml4w/scripts/ml4w-autostart > ~/.mydotfiles/ml4w-autostart.log 2>&1")
+    -- Autostart scripts (ML4W quickshell bar, dock, overview, wallpaper; replaced by noctalia)
+    -- hl.exec_cmd("~/.config/ml4w/scripts/ml4w-autostart > ~/.mydotfiles/ml4w-autostart.log 2>&1")
 
     -- Load GTK settings
     hl.exec_cmd("~/.config/hypr/scripts/gtk.sh")
 
     -- Start swaync
-    hl.exec_cmd("swaync")
+    -- hl.exec_cmd("swaync")
 
     -- Start hypridle
     hl.exec_cmd("hypridle")
 
-    -- Load cliphist history
-    hl.exec_cmd("wl-paste --watch cliphist store")
+    -- Load cliphist history (replaced by noctalia clipboard history)
+    -- hl.exec_cmd("wl-paste --watch cliphist store")
 
     -- Start nautilus
     hl.exec_cmd("nautilus --gapplication-service")
