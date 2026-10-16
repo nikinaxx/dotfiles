@@ -14,3 +14,8 @@ if settings then
     end
     settings:close()
 end
+
+-- Point SSH at the systemd user ssh-agent. Apps started from the launcher
+-- (e.g. VS Code) inherit this environment, not the one from .zshenv.
+local runtime_dir = os.getenv("XDG_RUNTIME_DIR") or "/run/user/1000"
+hl.env("SSH_AUTH_SOCK", runtime_dir .. "/ssh-agent.socket")

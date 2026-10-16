@@ -7,3 +7,4 @@ export EDITOR=nvim
 export VISUAL=nvim
 export STM32_PRG_PATH=/home/nik/.local/opt/STM32CubeProgrammer/bin
 export STM32CubeMX_PATH=/home/nik/.local/opt/STM32CubeMX
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
