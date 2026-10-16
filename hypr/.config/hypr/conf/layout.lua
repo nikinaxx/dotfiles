@@ -4,7 +4,7 @@
 
 hl.config({
     general = {
-        layout = "scrolling",
+        layout = "monocle",
     },
 
     dwindle = {
@@ -17,7 +17,7 @@ hl.config({
 
     scrolling = {
         fullscreen_on_one_column = true,
-        column_width = 0.5,
+        column_width = 1.0,
         focus_fit_method = 1,
         follow_focus = true,
         follow_min_visible = 0.8,

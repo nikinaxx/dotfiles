@@ -4,7 +4,7 @@
 -- -----------------------------------------------------
 
 return {
-    windows     = "border-reverse",
-    decorations = "rounding",
+    windows     = "no-border-no-gaps",
+    decorations = "gamemode",
     animations  = "default",
 }

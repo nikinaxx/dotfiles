@@ -4,23 +4,23 @@ config_version = 14
 order = [ "primary" ]
 
     [bar.primary]
-    background_opacity = 0.65999998524785042
-    border_width = 1.0
-    center = [ "workspaces" ]
+    background_opacity = 1.0
+    border_width = 0.0
+    center = [ "taskbar" ]
     concave_edge_corners = false
     end = [ "tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "clock" ]
-    margin_edge = 3
-    margin_ends = 16
+    margin_edge = 0
+    margin_ends = 0
     position = "bottom"
-    radius = 8
-    start = [ "session", "control-center", "launcher", "wallhaven" ]
-    thickness = 27
+    radius = 0
+    start = [ "session", "wallhaven", "workspaces" ]
+    thickness = 23
 
         [bar.primary.monitor."Dell Inc. DELL S2721DS 5LWPQ43"]
 
         [bar.primary.monitor."Dell Inc. DELL S2722DC 6NSGHD3"]
         end = []
-        start = []
+        start = [ "workspaces" ]
 
 [desktop_widgets]
 schema_version = 2
@@ -275,6 +275,15 @@ path = "/home/nik/Pictures/wallhaven-4dpyeo.jpg"
 [wallpaper.monitors.DP-8]
 path = "/home/nik/Pictures/wallhaven-og33x9.jpg"
 
+[shell.window_switcher]
+style = "carousel"              # "carousel" (freestanding depth layout) or "compact" (boxed strip)
+mru = true                     # order windows by most recently used (Alt+Tab) instead of workspace layout
+show_caption = true             # show window titles and application names below previews
+show_count = false               # show the current and total window count above the previews
+show_app_icon = true            # show application icons over window previews
+show_all_outputs = false         # list windows from every monitor; false = only the monitor showing the switcher
+current_workspace_only = true  # list only the windows of the workspace shown on each monitor; false = windows from every workspace
+
 [widget.battery]
 show_label = false
 
@@ -283,6 +292,11 @@ format = "{:%a %d.%m. %H:%M}"
 
 [widget.network]
 show_label = false
+
+[widget.taskbar]
+only_active_workspace = true
+show_active_indicator = true
+show_window_title = true
 
 [widget.volume]
 show_label = false
