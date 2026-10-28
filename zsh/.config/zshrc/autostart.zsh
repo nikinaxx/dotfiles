@@ -2,24 +2,15 @@
 # AUTOSTART
 # -----------------------------------------------------
 
-# -----------------------------------------------------
-# Fastfetch
-# -----------------------------------------------------
-if [[ $TTY == /dev/pts/* && ! -f ~/.config/ml4w/settings/hide-fastfetch ]]; then
-    fastfetch
-fi
+# fastfetch
 
-# -----------------------------------------------------
 # Direnv
-# -----------------------------------------------------
 eval "$(direnv hook zsh)"
-
-# -----------------------------------------------------
-# Zoxide
-# -----------------------------------------------------
-eval "$(zoxide init zsh --cmd cd)"
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh --cmd cd)"
