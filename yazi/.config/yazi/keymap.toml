@@ -17,3 +17,13 @@ desc = "Scroll preview down"
 on   = "<C-y>"
 run  = "seek -5"
 desc = "Scroll preview up"
+
+[[mgr.prepend_keymap]]
+on   = "t"
+run  = 'shell -- tmux new-window -c "$PWD"'
+desc = "New tmux window in current dir"
+
+[[mgr.prepend_keymap]]
+on   = "e"
+run  = 'shell -- tmux new-window -n "claude:$(basename "$PWD")" -c "$PWD" claude'
+desc = "Claude in current dir"
