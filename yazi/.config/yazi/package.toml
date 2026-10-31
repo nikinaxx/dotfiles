@@ -8,6 +8,16 @@ use = "ndtoan96/ouch"
 rev = "596b666"
 hash = "c2f4f4aca257dcceafa9e3b828dbf1c9"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "896fa5a"
+hash = "d1e0499cae5f3aeb628c267616d4b682"
+
+[[plugin.deps]]
+use = "wylie102/duckdb"
+rev = "3f8c863"
+hash = "87b9233a74325e95011670ed20bbd0d4"
+
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
 rev = "1183892"

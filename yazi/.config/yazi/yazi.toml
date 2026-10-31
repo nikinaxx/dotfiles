@@ -29,3 +29,16 @@ prepend_rules = [
     { mime = "*/javascript", use = [ "vscode", "edit", "reveal" ] },
     { mime = "inode/empty", use = [ "vscode", "edit", "reveal" ] },
 ]
+
+[plugin]
+prepend_previewers = [
+    { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+    { url = "*.csv", run = "duckdb" },
+    { url = "*.tsv", run = "duckdb" },
+    { url = "*.xlsx", run = "duckdb" },
+]
+prepend_preloaders = [
+    { url = "*.csv", run = "duckdb" },
+    { url = "*.tsv", run = "duckdb" },
+    { url = "*.xlsx", run = "duckdb" },
+]
