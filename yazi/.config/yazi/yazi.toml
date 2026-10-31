@@ -1,5 +1,7 @@
 [mgr]
 show_hidden = true
+sort_by = "natural"
+sort_dir_first = true
 
 [opener]
 brave = [
@@ -20,7 +22,7 @@ extract2 = [
 
 [open]
 prepend_rules = [
-    { name = "*.zip", use = "extract2" },
+    { url = "*.zip", use = "extract2" },
     { mime = "application/pdf", use = "brave" },
     { mime = "text/*", use = [ "vscode", "edit", "reveal" ] },
     { mime = "application/{json,ndjson}", use = [ "vscode", "edit", "reveal" ] },

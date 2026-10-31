@@ -1,6 +1,11 @@
 [[mgr.prepend_keymap]]
+on  = "y"
+run = [ 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ]
+desc = "Copy to system clipboard"
+
+[[mgr.prepend_keymap]]
 on   = [ "g", "c" ]
-run  = "shell 'code .' --orphan"
+run  = "shell --orphan -- code ."
 desc = "Open current folder in VS Code"
 
 [[mgr.prepend_keymap]]
@@ -27,3 +32,33 @@ desc = "New tmux window in current dir"
 on   = [ "g", "e"]
 run  = 'shell -- tmux new-window -n "claude:$(basename "$PWD")" -c "$PWD" claude'
 desc = "Claude in current dir"
+
+[[mgr.prepend_keymap]]
+on   = [ "O", "o" ]
+run  = "open --interactive"
+desc = "Open with…"
+
+[[mgr.prepend_keymap]]
+on   = [ "O", "c" ]
+run  = "plugin ouch zip"
+desc = "Compress → .zip"
+
+[[mgr.prepend_keymap]]
+on   = [ "O", "C" ]
+run  = "plugin ouch 7z"
+desc = "Compress → .7z"
+
+[[mgr.prepend_keymap]]
+on   = [ "O", "t" ]
+run  = "plugin ouch tar.gz"
+desc = "Compress → .tar.gz"
+
+[[mgr.prepend_keymap]]
+on   = [ "O", "x" ]
+run  = 'shell -- ouch d -y %s'
+desc = "Extract here"
+
+[[mgr.prepend_keymap]]
+on   = [ "O", "X" ]
+run  = 'shell -- for f in %s; do ouch d -y --dir "$(echo "$f" | sed "s/\.[^.]*$//")" "$f"; done'
+desc = "Extract each into own folder"
