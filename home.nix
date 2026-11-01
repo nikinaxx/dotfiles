@@ -1,5 +1,5 @@
 { ... }: {
-  imports = [ ./packages.nix ./links.nix ./git.nix ./ssh.nix ];
+  imports = [ ./packages.nix ./links.nix ./git.nix ./ssh.nix ./tmux.nix ];
 
   home.username = "nik";
   home.homeDirectory = "/home/nik";
