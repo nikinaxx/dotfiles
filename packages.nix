@@ -7,14 +7,11 @@
     bat eza fd fzf ripgrep zoxide jq gum gh
     btop htop fastfetch figlet tty-clock
     tesseract mediainfo imagemagick ffmpeg
-    inotify-tools wl-clipboard cliphist
+    inotify-tools wl-clipboard
     lua dfu-util
 
     # installed outside any package manager
     oh-my-posh        # ~/.local/bin
-    matugen           # cargo install
-    grimblast         # /usr/local/bin
-    pywalfox-native   # /usr/local/bin
     bitwarden-cli     # /usr/local/bin/bw
   ];
 
