@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  dotfiles = "${config.home.homeDirectory}/.dotfiles";
+  dotfiles = "${config.home.homeDirectory}/.config/home-manager";
   link = path: config.lib.file.mkOutOfStoreSymlink "${dotfiles}/${path}";
 in {
   home.file = {
@@ -14,5 +14,6 @@ in {
     "yazi".source     = link "yazi/.config/yazi";
     "zshrc".source    = link "zsh/.config/zshrc";
     "ohmyposh".source = link "ohmyposh/.config/ohmyposh";
+    "ulauncher".source = link "ulauncher/.config/ulauncher";
   };
 }
