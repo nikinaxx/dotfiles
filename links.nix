@@ -13,7 +13,6 @@ in {
     "kitty".source    = link "kitty/.config/kitty";
     "yazi".source     = link "yazi/.config/yazi";
     "zshrc".source    = link "zsh/.config/zshrc";
-    "bashrc".source   = link "bash/.config/bashrc";
     "ohmyposh".source = link "ohmyposh/.config/ohmyposh";
   };
 }
