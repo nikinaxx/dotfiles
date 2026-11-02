@@ -29,5 +29,8 @@ mkdir -p ${XDG_CACHE_HOME:-~/.cache}/zsh
 compinit -d ${XDG_CACHE_HOME:-~/.cache}/zsh/zcompdump
 # fzf-tab replaces the built-in menu (see plugins.zsh)
 zstyle ':completion:*' menu no
+# Group headers (plain text: fzf-tab drops colour escapes); < and > switch group
+zstyle ':completion:*:descriptions' format '[%d]'
+zstyle ':fzf-tab:*' switch-group '<' '>'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # lowercase matches both cases
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
