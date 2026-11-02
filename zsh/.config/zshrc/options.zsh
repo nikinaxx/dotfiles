@@ -32,5 +32,13 @@ zstyle ':completion:*' menu no
 # Group headers (plain text: fzf-tab drops colour escapes); < and > switch group
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':fzf-tab:*' switch-group '<' '>'
+# Keep the popup tall enough for previews even with few matches
+zstyle ':fzf-tab:*' fzf-min-height 20
+# Preview the highlighted directory when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always --icons=always $realpath'
+# Preview file contents (or a listing for directories) for commands that open files
+zstyle ':fzf-tab:complete:(nvim|bat|less):*' fzf-preview \
+    '[[ -d $realpath ]] && eza -1 --color=always --icons=always $realpath \
+     || bat --color=always --style=numbers --line-range=:500 $realpath'
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # lowercase matches both cases
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
