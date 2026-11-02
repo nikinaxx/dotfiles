@@ -17,6 +17,7 @@ setopt hist_expire_dups_first hist_find_no_dups
 # -----------------------------------------------------
 setopt auto_cd interactive_comments no_beep
 setopt numeric_glob_sort  # sort file10 after file9, not after file1
+zle_highlight=('paste:none')  # don't highlight pasted text (looks like a selection)
 
 # -----------------------------------------------------
 # Completion
