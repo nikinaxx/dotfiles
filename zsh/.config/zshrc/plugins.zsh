@@ -22,8 +22,10 @@ zplugin-update() {
     done
 }
 
-# history-substring-search must come after syntax highlighting
+# fzf-tab: after compinit (options.zsh), before autosuggestions and highlighting.
+# history-substring-search must come after syntax highlighting.
 _zplugin_load jeffreytse zsh-vi-mode
+_zplugin_load Aloxaf fzf-tab
 _zplugin_load zsh-users zsh-autosuggestions
 _zplugin_load zdharma-continuum fast-syntax-highlighting
 _zplugin_load zsh-users zsh-history-substring-search

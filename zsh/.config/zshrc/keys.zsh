@@ -38,6 +38,8 @@ zle -N _copy_buffer
 zvm_after_init() {
     # Ctrl+R history, Ctrl+T files, Alt+C cd
     source <(fzf --zsh)
+    # fzf --zsh takes Tab for its ** trigger; give it back to fzf-tab
+    bindkey '^I' fzf-tab-complete
 
     bindkey '^[[H'    beginning-of-line
     bindkey '^[OH'    beginning-of-line

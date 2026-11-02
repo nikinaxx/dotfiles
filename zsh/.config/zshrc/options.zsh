@@ -22,9 +22,12 @@ setopt numeric_glob_sort  # sort file10 after file9, not after file1
 # Completion
 # -----------------------------------------------------
 zmodload zsh/complist
+# Completions shipped by Nix packages (rg, fd, bat, eza, gh, ...); must come before compinit
+fpath=(~/.nix-profile/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 mkdir -p ${XDG_CACHE_HOME:-~/.cache}/zsh
 compinit -d ${XDG_CACHE_HOME:-~/.cache}/zsh/zcompdump
-zstyle ':completion:*' menu select
+# fzf-tab replaces the built-in menu (see plugins.zsh)
+zstyle ':completion:*' menu no
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'  # lowercase matches both cases
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
