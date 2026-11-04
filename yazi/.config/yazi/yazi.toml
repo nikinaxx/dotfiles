@@ -5,12 +5,12 @@ sort_dir_first = true
 
 [opener]
 brave = [
-    { run = 'brave-browser --new-window "$@"', orphan = true, desc = "Brave" },
+    { run = 'brave-browser --new-window %s', orphan = true, desc = "Brave" },
 ]
 
 # -r reuses the last focused VS Code window instead of opening a new one
 vscode = [
-    { run = 'code -r "$@"', orphan = true, desc = "VS Code" },
+    { run = 'code -r %s', orphan = true, desc = "VS Code" },
 ]
 
 extract = [
