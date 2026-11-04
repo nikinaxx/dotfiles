@@ -7,6 +7,9 @@ sort_dir_first = true
 brave = [
     { run = 'brave-browser --new-window %s', orphan = true, desc = "Brave" },
 ]
+vivaldi = [
+    { run = 'flatpak run --file-forwarding com.vivaldi.Vivaldi @@ %s @@', orphan = true, desc = "Vivaldi" },
+]
 
 # -r reuses the last focused VS Code window instead of opening a new one
 vscode = [
@@ -23,7 +26,7 @@ extract2 = [
 [open]
 prepend_rules = [
     { url = "*.zip", use = "extract2" },
-    { mime = "application/pdf", use = "brave" },
+    { mime = "application/pdf", use = "vivaldi" },
     { mime = "text/*", use = [ "vscode", "edit", "reveal" ] },
     { mime = "application/{json,ndjson}", use = [ "vscode", "edit", "reveal" ] },
     { mime = "*/javascript", use = [ "vscode", "edit", "reveal" ] },
