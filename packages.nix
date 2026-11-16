@@ -1,12 +1,35 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    duckdb glow ouch yazi
-    bat eza fd fzf ripgrep zoxide jq gum gh
-    btop htop fastfetch figlet tty-clock
-    tesseract mediainfo imagemagick ffmpeg
+    # Shell & prompt
+    oh-my-posh zoxide
+
+    # CLI utilities
+    bat eza fd fzf gum jq ripgrep
+
+    # File management (yazi + its previewers/archive tool)
+    yazi ouch mediainfo
+
+    # Data & docs
+    duckdb glow
+
+    # Media & OCR
+    ffmpeg imagemagick tesseract
+
+    # System info & monitoring
+    btop fastfetch htop
+
+    # Development
+    gh lua
+    clang-tools      # clangd, clang-tidy, clang-format
+
+    # Embedded
+    dfu-util
+
+    # Desktop / Wayland
     inotify-tools wl-clipboard
-    lua dfu-util
-    oh-my-posh       
+
+    # Fun
+    figlet tty-clock
   ];
 
   # replaces nix profile direnv + nix-direnv and generates ~/.config/direnv/direnvrc
