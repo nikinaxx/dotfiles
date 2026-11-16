@@ -1,12 +1,35 @@
-[[mgr.prepend_keymap]]
-on  = "y"
-run = [ 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ]
-desc = "Copy to system clipboard"
-
+# Go to keymaps ------------------------------------------------------------------------------------
 [[mgr.prepend_keymap]]
 on   = [ "g", "c" ]
 run  = "shell --orphan -- code ."
 desc = "Open current folder in VS Code"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "t" ]
+run  = 'shell -- tmux new-window -c "$PWD"'
+desc = "New tmux window in current dir"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "e"]
+run  = 'shell -- tmux new-window -n "claude:$(basename "$PWD")" -c "$PWD" claude'
+desc = "Claude in current dir"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "n" ]
+run  = "cd ~/Notes"
+desc = "Go to ~/Notes"
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "p" ]
+run  = "cd ~/Projects"
+desc = "Go to ~/Projects"
+
+# Other keymaps ------------------------------------------------------------------------------------
+
+[[mgr.prepend_keymap]]
+on  = "y"
+run = [ 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ]
+desc = "Copy to system clipboard"
 
 [[mgr.prepend_keymap]]
 on   = "<Enter>"
@@ -23,15 +46,7 @@ on   = "<C-y>"
 run  = "seek -5"
 desc = "Scroll preview up"
 
-[[mgr.prepend_keymap]]
-on   = [ "g", "t" ]
-run  = 'shell -- tmux new-window -c "$PWD"'
-desc = "New tmux window in current dir"
-
-[[mgr.prepend_keymap]]
-on   = [ "g", "e"]
-run  = 'shell -- tmux new-window -n "claude:$(basename "$PWD")" -c "$PWD" claude'
-desc = "Claude in current dir"
+# Extraction menu keymaps ------------------------------------------------------------------------------------
 
 [[mgr.prepend_keymap]]
 on   = [ "O", "o" ]
