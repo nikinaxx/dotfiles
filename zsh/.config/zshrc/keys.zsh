@@ -49,6 +49,7 @@ zvm_after_init() {
     bindkey '^[[1;5D' backward-word
     bindkey '^[[1;5C' forward-word
     bindkey '^H'      backward-kill-word
+    bindkey '^[.'     insert-last-word
 
     bindkey '^[[A'    history-substring-search-up
     bindkey '^[OA'    history-substring-search-up
